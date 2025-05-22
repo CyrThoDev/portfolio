@@ -21,7 +21,7 @@ const Menu = () => {
 	return (
 		<nav
 			className={`sticky top-0 z-50  transition-colors duration-300 ${
-				isSticky ? "shadow-md bg-themered" : ""
+				isSticky ? "shadow-md bg-themewhite" : ""
 			}`}
 		>
 			<div className="flex flex-col md:flex-row gap-4 text-xl items-center text-center justify-center py-4 tablet:flex-row tablet:justify-end tablet:gap-8 tablet:px-8">

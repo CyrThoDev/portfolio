@@ -4,7 +4,7 @@ import OfferDetailSection from "@/components/OfferDetailSection";
 const offers: Offer[] = [
 	{
 		title: "Landing Page / One Page",
-		color: "bg-[#fdf4f0]",
+		color: "bg-themered/20",
 		description:
 			"Un site simple, efficace et rapide à mettre en ligne. Tout est regroupé sur une seule page : présentation, services, témoignages, contact… Parfait pour lancer une activité, annoncer un événement ou présenter un produit sans se perdre dans une arborescence complexe.",
 		points: [
@@ -17,7 +17,7 @@ const offers: Offer[] = [
 	},
 	{
 		title: "Site vitrine classique",
-		color: "bg-themeorange/20",
+		color: "bg-themered/20",
 		description:
 			"Un site structuré avec plusieurs pages pour présenter en détail ton activité, tes services, ton équipe, tes réalisations, etc. Il s’adapte à ton image avec un design personnalisé. Idéal pour construire une présence pro, rassurer tes futurs clients, et développer ta visibilité.",
 		points: [
@@ -30,7 +30,7 @@ const offers: Offer[] = [
 	},
 	{
 		title: "Site e-commerce",
-		color: "bg-[#D16565]/20",
+		color: "bg-themered/20",
 		description:
 			"Une boutique en ligne pour vendre tes produits ou prestations, gérer tes commandes, recevoir les paiements, et suivre ton activité. Je m’occupe de toute la partie technique pour que tu puisses te concentrer sur ton offre.",
 		points: [
@@ -43,7 +43,7 @@ const offers: Offer[] = [
 	},
 	{
 		title: "Application mobile",
-		color: "bg-purple-100",
+		color: "bg-themered/20",
 		description:
 			"Une application mobile sur mesure pour offrir une vraie expérience utilisateur à tes clients : réservation, suivi, contenu exclusif, messagerie ou notifications… Selon ton besoin, on peut partir sur une web app ou une application native.",
 		points: [
@@ -58,7 +58,7 @@ const offers: Offer[] = [
 
 export default function OffresPage() {
 	return (
-		<main className="min-h-screen flex flex-col px-6 py-16 text-gray-800 bg-white scroll-smooth">
+		<main className="min-h-screen flex flex-col px-10 lg:px-30 py-16 text-gray-800  scroll-smooth">
 			<h1 className="text-4xl font-bold mb-10 text-center">
 				Mes Offres de Création de Site
 			</h1>

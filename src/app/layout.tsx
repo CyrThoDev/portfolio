@@ -37,7 +37,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="fr"
-			className={`${beautiful.variable}  ${lato.variable} ${playfair.variable} font-lato antialiased`}
+			className={`${beautiful.variable}  ${lato.variable} ${playfair.variable} bg-themewhite font-lato antialiased`}
 		>
 			<body>
 				<NavBar />
