@@ -1,79 +1,85 @@
+import OfferCard, { type Offer } from "@/components/OfferCard";
+import OfferDetailSection from "@/components/OfferDetailSection";
+
+const offers: Offer[] = [
+	{
+		title: "Landing Page / One Page",
+		color: "bg-[#fdf4f0]",
+		description:
+			"Un site simple, efficace et rapide à mettre en ligne. Tout est regroupé sur une seule page : présentation, services, témoignages, contact… Parfait pour lancer une activité, annoncer un événement ou présenter un produit sans se perdre dans une arborescence complexe.",
+		points: [
+			"Contenu clair et structuré",
+			"Chargement rapide",
+			"Optimisée pour le SEO local",
+			"Formulaire de contact inclus",
+		],
+		cta: "Voir un exemple de landing page",
+	},
+	{
+		title: "Site vitrine classique",
+		color: "bg-themeorange/20",
+		description:
+			"Un site structuré avec plusieurs pages pour présenter en détail ton activité, tes services, ton équipe, tes réalisations, etc. Il s’adapte à ton image avec un design personnalisé. Idéal pour construire une présence pro, rassurer tes futurs clients, et développer ta visibilité.",
+		points: [
+			"Pages : Accueil, À propos, Services, Contact...",
+			"Design sur mesure",
+			"Optimisation SEO de base",
+			"Modules complémentaires possibles : blog, newsletter, agenda, annuaire...",
+		],
+		cta: "Découvrir les options possibles",
+	},
+	{
+		title: "Site e-commerce",
+		color: "bg-[#D16565]/20",
+		description:
+			"Une boutique en ligne pour vendre tes produits ou prestations, gérer tes commandes, recevoir les paiements, et suivre ton activité. Je m’occupe de toute la partie technique pour que tu puisses te concentrer sur ton offre.",
+		points: [
+			"Catalogue de produits",
+			"Paiement en ligne sécurisé",
+			"Gestion des commandes et des stocks",
+			"Options avancées : click & collect, code promo, facturation automatique",
+		],
+		cta: "Parlons de ta boutique en ligne",
+	},
+	{
+		title: "Application mobile",
+		color: "bg-purple-100",
+		description:
+			"Une application mobile sur mesure pour offrir une vraie expérience utilisateur à tes clients : réservation, suivi, contenu exclusif, messagerie ou notifications… Selon ton besoin, on peut partir sur une web app ou une application native.",
+		points: [
+			"Compatible mobile/tablette",
+			"Réservation, messagerie, suivi, etc.",
+			"Progressive Web App ou app native",
+			"Idéal pour projets interactifs ou communautaires",
+		],
+		cta: "Discutons de ton idée d'app",
+	},
+];
+
 export default function OffresPage() {
 	return (
-		<>
-			<main className="max-w-6xl mx-auto px-6 py-16 text-gray-800">
-				<h1 className="text-4xl font-bold mb-10 text-center">
-					Mes Offres de Création de Site
-				</h1>
+		<main className="min-h-screen flex flex-col px-6 py-16 text-gray-800 bg-white scroll-smooth">
+			<h1 className="text-4xl font-bold mb-10 text-center">
+				Mes Offres de Création de Site
+			</h1>
 
-				<section className="grid md:grid-cols-3 gap-8">
-					<OfferCard
-						title="Site Express"
-						color="bg-green-100"
-						description="Un site vitrine rapide à mettre en ligne avec un template WordPress personnalisé. Idéal pour les indépendants qui démarrent."
-						points={[
-							"1 à 5 pages",
-							"Personnalisation rapide",
-							"Template prêt à l'emploi",
-							"Mise en ligne sous 7 jours",
-						]}
-						cta="Découvrir"
-					/>
-					<OfferCard
-						title="Site WordPress Personnalisé"
-						color="bg-blue-100"
-						description="Un site plus flexible et évolutif, créé à partir d'un thème WordPress ajusté à ton image."
-						points={[
-							"Charte graphique personnalisée",
-							"Fonctionnalités spécifiques",
-							"Blog, prise de rendez-vous, newsletter",
-							"Formation incluse",
-						]}
-						cta="Voir les exemples"
-					/>
-					<OfferCard
-						title="Site sur-mesure codé"
-						color="bg-purple-100"
-						description="Un site codé de A à Z avec Next.js pour un rendu unique, performant et scalable."
-						points={[
-							"Design sur mesure",
-							"Performances & SEO optimisés",
-							"Intégration API ou CMS Headless",
-							"Idéal projets ambitieux",
-						]}
-						cta="Parlons de votre projet"
-					/>
-				</section>
-			</main>
-		</>
-	);
-}
-
-function OfferCard({
-	title,
-	description,
-	points,
-	cta,
-	color,
-}: {
-	title: string;
-	description: string;
-	points: string[];
-	cta: string;
-	color: string;
-}) {
-	return (
-		<div className={`p-6 rounded-2xl shadow-md ${color}`}>
-			<h2 className="text-2xl font-semibold mb-4">{title}</h2>
-			<p className="mb-4">{description}</p>
-			<ul className="mb-6 list-disc list-inside text-sm text-gray-700 space-y-1">
-				{points.map((p, i) => (
-					<li key={i}>{p}</li>
+			<section className="w-full max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+				{offers.map((offer, index) => (
+					<a key={index} href={`#offer-${index}`} className="block">
+						<OfferCard {...offer} />
+					</a>
 				))}
-			</ul>
-			<button className="text-sm font-medium text-white bg-black px-4 py-2 rounded-md hover:bg-gray-900 transition">
-				{cta}
-			</button>
-		</div>
+			</section>
+
+			{/* Section détails des offres */}
+			{offers.map((offer, index) => (
+				<OfferDetailSection
+					key={index}
+					id={`offer-${index}`}
+					offer={offer}
+					reverse={index % 2 === 1}
+				/>
+			))}
+		</main>
 	);
 }

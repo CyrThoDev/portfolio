@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const services = [
 	{
 		title: "Vous cherchez une formatrice ?",
-		icon: <FaChalkboardTeacher className="text-4xl text-themered" />,
+		icon: <FaChalkboardTeacher className="text-6xl text-themered" />,
 		items: [
 			"Cours & ateliers",
 			"Niveau visé : jusqu'à Bac+2",
@@ -16,8 +16,8 @@ const services = [
 		],
 	},
 	{
-		title: "Tu veux un site web ou un renfort en dev ?",
-		icon: <FaBuilding className="text-4xl text-themered" />,
+		title: "Vous avez besoin d'un renfort dans votre équipe de dev?",
+		icon: <FaBuilding className="text-6xl text-themered" />,
 		items: [
 			"Missions en freelance (à distance ou en présentiel dans les Landes)",
 			"Création de fonctionnalités, refonte, intégration",
@@ -26,8 +26,8 @@ const services = [
 		],
 	},
 	{
-		title: "Tu veux découvrir mes projets ?",
-		icon: <FaLaptopHouse className="text-4xl text-themered" />,
+		title: "Vous avez un projet de site ou d'applicaiton mobile?",
+		icon: <FaLaptopHouse className="text-6xl text-themered" />,
 		items: [
 			"Création de sites ou applications mobiles",
 			"De la mise en place d'un template au site sur-mesure",
@@ -58,11 +58,13 @@ export default function Offres() {
 							whileInView="visible"
 							viewport={{ once: true }}
 							variants={cardVariants}
-							className=" rounded-2xl shadow-xl p-6 border hover:scale-105 hover:shadow-xl transition-transform"
+							className=" rounded-2xl shadow-xl p-6 hover:scale-105 hover:shadow-xl transition-transform"
 						>
-							<div className="flex items-center gap-3 mb-4">
-								{service.icon}
-								<h3 className="text-2xl font-semibold">{service.title}</h3>
+							<div className="flex flex-col items-center gap-3 mb-4">
+								<p>{service.icon}</p>
+								<h3 className="text-2xl font-semibold font-playfair h-[100px] ">
+									{service.title}
+								</h3>
 							</div>
 							<ul className="space-y-2 mt-4">
 								<div className="space-y-3 mt-4">

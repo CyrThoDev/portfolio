@@ -7,7 +7,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 
 const Footer = () => {
 	return (
-		<div className="text-white grid grid-cols-2 items-center bg-black  px-10 py-4 ">
+		<div className="px-10 lg:px-30 text-white  grid grid-cols-2 items-center bg-black py-4 ">
 			<div className="">
 				<p className="text-white">
 					{" "}

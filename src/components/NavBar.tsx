@@ -15,8 +15,8 @@ const NavBar = () => {
 
 	const mailtoHref = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 	return (
-		<div className="flex px-10 py-2 bg-themered justify-between items-center">
-			<div className="font-playfair  flex flex-col md:flex-row justify-start gap-4 items-center">
+		<div className="px-10 lg:px-30 flex flex-col gap-4 md:flex-row py-2 bg-themered justify-between items-center">
+			<div className="font-playfair flex flex-col md:flex-row justify-start gap-4 items-center">
 				<Link href="/">
 					<Image
 						src={logo}
@@ -25,8 +25,8 @@ const NavBar = () => {
 						height={75}
 					/>
 				</Link>
-				<div className="flex flex-row gap-4 text-xl">
-					<Link href={mailtoHref} className="font-medium">
+				<div className=" flex flex-col items-center md:flex-row gap-4 text-xl">
+					<Link href={mailtoHref} className="font-xl">
 						cyriellethomas.pro@gmail.com
 					</Link>
 					<Link href="tel:0761150913">07 61 15 09 13</Link>
@@ -42,9 +42,6 @@ const NavBar = () => {
 						target="_blank"
 					>
 						<FaLinkedin size="2rem" />
-					</Link>
-					<Link href="https://www.instagram.com/cyr_webdev" target="_blank">
-						<SiMalt size="3rem" />
 					</Link>
 				</div>
 			</div>

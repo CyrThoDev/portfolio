@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import Menu from "@/components/Menu";
 
 const beautiful = localFont({
 	src: "../fonts/beautiful.woff2",
@@ -36,11 +37,13 @@ export default function RootLayout({
 	return (
 		<html
 			lang="fr"
-			className={`${beautiful.variable}  ${lato.variable} ${playfair.variable} antialiased`}
+			className={`${beautiful.variable}  ${lato.variable} ${playfair.variable} font-lato antialiased`}
 		>
-			<NavBar />
-			<body className="bg-themewhite">{children}</body>
-			<Footer />
+			<body>
+				<NavBar />
+				<Menu />
+				{children} <Footer />
+			</body>
 		</html>
 	);
 }
