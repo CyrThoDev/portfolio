@@ -1,8 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { BsFacebook } from "react-icons/bs";
-import { FaInstagramSquare } from "react-icons/fa";
 
 const Menu = () => {
 	return (

@@ -1,10 +1,5 @@
 "use client";
-import {
-	FaChalkboardTeacher,
-	FaBuilding,
-	FaLaptopHouse,
-	FaCheckCircle,
-} from "react-icons/fa";
+import { FaChalkboardTeacher, FaBuilding, FaLaptopHouse } from "react-icons/fa";
 
 import { motion } from "framer-motion";
 

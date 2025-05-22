@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
-import { BsFacebook } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { SiMalt } from "react-icons/si";
