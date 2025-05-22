@@ -1,6 +1,35 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { LiaChalkboardTeacherSolid } from "react-icons/lia";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
+
+export const metadata: Metadata = {
+	title: "À propos – Cyrielle Thomas",
+	description:
+		"Développeuse web freelance et formatrice passionnée, je conçois des solutions web sur mesure et accessibles, en alliant technique et pédagogie.",
+	openGraph: {
+		title: "À propos – Cyrielle Thomas",
+		description:
+			"Découvrez mon parcours, mes valeurs et ma manière de travailler en tant que développeuse et formatrice.",
+		url: "https://www.cyrielle-webdev.fr/apropos",
+		type: "website",
+		images: [
+			{
+				url: "https://www.cyrielle-webdev.fr/og/apropos.png",
+				width: 1200,
+				height: 630,
+				alt: "À propos de Cyrielle Thomas",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "À propos – Cyrielle Thomas",
+		description:
+			"Apprenez à me connaître : mon expérience, ma philosophie et mes engagements dans le développement web.",
+		images: ["https://www.cyrielle-webdev.fr/og/apropos.png"],
+	},
+};
 export default function Apropos() {
 	return (
 		<section className="py-16 font-lato px-10 md:px-20">

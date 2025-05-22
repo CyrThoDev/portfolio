@@ -1,5 +1,34 @@
+import type { Metadata } from "next";
 import OfferCard, { type Offer } from "@/components/OfferCard";
 import OfferDetailSection from "@/components/OfferDetailSection";
+
+export const metadata: Metadata = {
+	title: "Prestations – Cyrielle Thomas",
+	description:
+		"Création de sites web WordPress ou sur mesure, accompagnement technique et formation au développement web.",
+	openGraph: {
+		title: "Prestations – Cyrielle Thomas",
+		description:
+			"Particuliers, entreprises ou écoles : découvrez mes offres sur mesure pour vos projets web ou vos formations.",
+		url: "https://www.cyrielle-webdev.fr/prestations",
+		type: "website",
+		images: [
+			{
+				url: "https://www.cyrielle-webdev.fr/og/prestations.png",
+				width: 1200,
+				height: 630,
+				alt: "Prestations de Cyrielle Thomas",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Prestations – Cyrielle Thomas",
+		description:
+			"Sites vitrines, e-commerce, accompagnement, formation : des prestations pensées pour vos besoins.",
+		images: ["https://www.cyrielle-webdev.fr/og/prestations.png"],
+	},
+};
 
 const offers: Offer[] = [
 	{
