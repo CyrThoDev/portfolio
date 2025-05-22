@@ -9,10 +9,10 @@ const Footer = () => {
 			<div className="flex flex-col lg:grid lg:grid-cols-2 lg:items-center gap-6">
 				<div className="text-md">
 					<p>
-						Je suis située à Mimizan dans les Landes mais je suis très à l'aise
-						avec le travail à distance et je mettrai tous les outils à votre
-						disposition pour que notre collaboration se passe comme si nous
-						étions à côté !
+						Je suis située à Mimizan dans les Landes mais je suis très à
+						l&#39;aise avec le travail à distance et je mettrai tous les outils
+						à votre disposition pour que notre collaboration se passe comme si
+						nous étions à côté !
 					</p>
 				</div>
 
