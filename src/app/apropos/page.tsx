@@ -3,7 +3,7 @@ import { LiaChalkboardTeacherSolid } from "react-icons/lia";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
 export default function Apropos() {
 	return (
-		<section className=" py-16 font-lato px-6 md:px-20">
+		<section className="py-16 font-lato px-10 md:px-20">
 			<div className="max-w-5xl mx-auto space-y-12">
 				{/* Intro */}
 				<div>
