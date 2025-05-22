@@ -34,7 +34,7 @@ export default function OfferDetailSection({
 						<p className="mb-4 text-sm">
 							🔍 <strong>Pour qui :</strong> Indépendants, artisans, thérapeutes
 							ou encore événements ponctuels (salons, stages...). Tu veux aller
-							à l’essentiel avec un site simple, clair, et percutant.
+							à l&#39;essentiel avec un site simple, clair, et percutant.
 						</p>
 					)}
 					{offer.title.includes("vitrine") && (
@@ -75,7 +75,7 @@ export default function OfferDetailSection({
 							<ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
 								<li>Blog ou actualités</li>
 								<li>Newsletter avec inscription</li>
-								<li>Agenda ou calendrier d'événements</li>
+								<li>Agenda ou calendrier d&#39;événements</li>
 								<li>Annuaire ou répertoire de membres</li>
 								<li>Galerie photos/vidéos</li>
 								<li>Carte interactive</li>

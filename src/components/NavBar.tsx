@@ -4,7 +4,6 @@ import logo from "../../public/logo.png";
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
-import { SiMalt } from "react-icons/si";
 
 const NavBar = () => {
 	const email = "cyriellethomas.pro@gmail.com";
