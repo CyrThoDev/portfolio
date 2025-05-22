@@ -28,7 +28,7 @@ const Presentation = () => {
 					src={cyr}
 					alt="Photo Cyrielle"
 					width={350}
-					height={"auto"}
+					height={300}
 					className="rounded-3xl"
 				/>
 			</section>
