@@ -1,35 +1,17 @@
-import type { Metadata } from "next";
+import { realisations } from "@/data/realisationData";
+import RealisationCard from "@/components/RealisationCard";
 
-export const metadata: Metadata = {
-	title: "Réalisations – Cyrielle Thomas",
-	description:
-		"Exemples concrets de projets menés : sites vitrines, e-commerce, projets pédagogiques ou sur mesure.",
-	openGraph: {
-		title: "Réalisations – Cyrielle Thomas",
-		description:
-			"Parcourez mes réalisations : du site vitrine aux plateformes pédagogiques, un aperçu de mon savoir-faire.",
-		url: "https://www.cyrielle-webdev.fr/realisations",
-		type: "website",
-		images: [
-			{
-				url: "https://www.cyrielle-webdev.fr/og/realisations.png",
-				width: 1200,
-				height: 630,
-				alt: "Réalisations de Cyrielle Thomas",
-			},
-		],
-	},
-	twitter: {
-		card: "summary_large_image",
-		title: "Réalisations – Cyrielle Thomas",
-		description:
-			"Un aperçu de mes projets web réalisés pour des clients et partenaires, avec une approche personnalisée.",
-		images: ["https://www.cyrielle-webdev.fr/og/realisations.png"],
-	},
-};
-
-function page() {
-	return <div>page</div>;
+export default function Page() {
+	return (
+		<div className="px-10 lg:px-30">
+			<h1 className="text-3xl  text-left my-20 font-bold">
+				Un aperçu de mes dernières réalisations...
+			</h1>
+			<div className="space-y-10 grid grid-cols-3 gap-8 mb-20">
+				{realisations.map((realisation) => (
+					<RealisationCard key={realisation.title} realisation={realisation} />
+				))}
+			</div>
+		</div>
+	);
 }
-
-export default page;
