@@ -65,7 +65,7 @@ export default function RealisationCard({
 						{technologies.map((tech) => (
 							<span
 								key={tech}
-								className="text-xs px-3 py-1 rounded-full bg-themered text-white"
+								className="text-xs px-3 py-1 rounded-full bg-themeorange text-black"
 							>
 								{tech}
 							</span>

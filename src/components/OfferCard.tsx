@@ -22,9 +22,12 @@ export default function OfferCard({
 					<li key={i}>{p}</li>
 				))}
 			</ul>
-			<span className="text-sm underline text-black hover:text-gray-700">
+			<button
+				type="button"
+				className="text-sm underline text-black hover:text-gray-700"
+			>
 				{cta}
-			</span>
+			</button>
 		</div>
 	);
 }

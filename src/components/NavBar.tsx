@@ -33,12 +33,17 @@ const NavBar = () => {
 			</div>
 			<div>
 				<div className=" flex flex-row gap-4 items-center">
-					<Link href="https://www.instagram.com/cyr_webdev" target="_blank">
+					<Link
+						href="https://www.instagram.com/cyr_webdev"
+						target="_blank"
+						aria-label="Instagram"
+					>
 						<FaInstagramSquare size="2rem" />
 					</Link>
 					<Link
 						href="https://www.linkedin.com/in/cyrielle-thomas/"
 						target="_blank"
+						aria-label="LinkedIn"
 					>
 						<FaLinkedin size="2rem" />
 					</Link>

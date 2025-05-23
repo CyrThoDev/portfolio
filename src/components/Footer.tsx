@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { BsFacebook } from "react-icons/bs";
-import { FaInstagramSquare } from "react-icons/fa";
+import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
 	return (
@@ -19,16 +18,17 @@ const Footer = () => {
 				<div className="flex flex-col gap-4 items-center lg:items-end">
 					<div className="flex gap-4 justify-center">
 						<Link
-							href="https://www.facebook.com/cyriellewebdev/"
+							href="https://www.linkedin.com/in/cyrielle-thomas/"
 							target="_blank"
-							rel="noopener noreferrer"
+							aria-label="LinkedIn"
 						>
-							<BsFacebook size="2rem" />
+							<FaLinkedin size="2rem" />
 						</Link>
 						<Link
 							href="https://www.instagram.com/cyr_webdev"
 							target="_blank"
 							rel="noopener noreferrer"
+							aria-label="Instagram"
 						>
 							<FaInstagramSquare size="2rem" />
 						</Link>

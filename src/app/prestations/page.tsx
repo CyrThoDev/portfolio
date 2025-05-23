@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import OfferCard, { type Offer } from "@/components/OfferCard";
-import OfferDetailSection from "@/components/OfferDetailSection";
+import OfferDetailSection from "@/components/OfferDetailCard";
+import OfferDetailCard from "@/components/OfferDetailCard";
 
 export const metadata: Metadata = {
 	title: "Prestations – Cyrielle Thomas",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
 const offers: Offer[] = [
 	{
 		title: "Landing Page / One Page",
-		color: "bg-themered/20",
+		color: "bg-[#F4D9C3]",
 		description:
 			"Un site simple, efficace et rapide à mettre en ligne. Tout est regroupé sur une seule page : présentation, services, témoignages, contact… Parfait pour lancer une activité, annoncer un événement ou présenter un produit sans se perdre dans une arborescence complexe.",
 		points: [
@@ -42,11 +43,11 @@ const offers: Offer[] = [
 			"Optimisée pour le SEO local",
 			"Formulaire de contact inclus",
 		],
-		cta: "Voir un exemple de landing page",
+		cta: "Que veux-tu mettre en avant ?",
 	},
 	{
 		title: "Site vitrine classique",
-		color: "bg-themered/20",
+		color: "bg-[#F4D9C3]",
 		description:
 			"Un site structuré avec plusieurs pages pour présenter en détail ton activité, tes services, ton équipe, tes réalisations, etc. Il s’adapte à ton image avec un design personnalisé. Idéal pour construire une présence pro, rassurer tes futurs clients, et développer ta visibilité.",
 		points: [
@@ -55,11 +56,11 @@ const offers: Offer[] = [
 			"Optimisation SEO de base",
 			"Modules complémentaires possibles : blog, newsletter, agenda, annuaire...",
 		],
-		cta: "Découvrir les options possibles",
+		cta: "Parlons de ton projet",
 	},
 	{
 		title: "Site e-commerce",
-		color: "bg-themered/20",
+		color: "bg-[#F4D9C3]",
 		description:
 			"Une boutique en ligne pour vendre tes produits ou prestations, gérer tes commandes, recevoir les paiements, et suivre ton activité. Je m’occupe de toute la partie technique pour que tu puisses te concentrer sur ton offre.",
 		points: [
@@ -68,11 +69,11 @@ const offers: Offer[] = [
 			"Gestion des commandes et des stocks",
 			"Options avancées : click & collect, code promo, facturation automatique",
 		],
-		cta: "Parlons de ta boutique en ligne",
+		cta: "Commence à vendre en ligne",
 	},
 	{
 		title: "Application mobile",
-		color: "bg-themered/20",
+		color: "bg-[#F4D9C3]",
 		description:
 			"Une application mobile sur mesure pour offrir une vraie expérience utilisateur à tes clients : réservation, suivi, contenu exclusif, messagerie ou notifications… Selon ton besoin, on peut partir sur une web app ou une application native.",
 		points: [
@@ -81,10 +82,11 @@ const offers: Offer[] = [
 			"Progressive Web App ou app native",
 			"Idéal pour projets interactifs ou communautaires",
 		],
-		cta: "Discutons de ton idée d'app",
+		cta: "Discutons de ton idée",
 	},
 ];
 
+const isEven = (n: number) => n % 2 === 0;
 export default function OffresPage() {
 	return (
 		<main className="min-h-screen flex flex-col px-10 lg:px-30 py-16 text-gray-800  scroll-smooth">
@@ -99,16 +101,37 @@ export default function OffresPage() {
 					</a>
 				))}
 			</section>
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+				{offers.map((offer, index) => {
+					const isEven = index % 2 === 0;
+					const row = Math.floor(index / 2);
+					const col = index % 2;
 
-			{/* Section détails des offres */}
-			{offers.map((offer, index) => (
-				<OfferDetailSection
-					key={index}
-					id={`offer-${index}`}
-					offer={offer}
-					reverse={index % 2 === 1}
-				/>
-			))}
+					const desktopColor =
+						col === 0
+							? row % 2 === 0
+								? "bg-white"
+								: "bg-[#fdf4f0]"
+							: row % 2 === 0
+								? "bg-[#fdf4f0]"
+								: "bg-white";
+
+					const mobileColor = isEven ? "bg-white" : "bg-[#fdf4f0]";
+
+					return (
+						<div
+							key={index}
+							className={`${mobileColor} md:${desktopColor} rounded-xl flex flex-col h-full`}
+						>
+							<OfferDetailCard
+								offer={offer}
+								reverse={index % 2 === 1}
+								bgColor="bg-transparent"
+							/>
+						</div>
+					);
+				})}
+			</div>
 		</main>
 	);
 }
