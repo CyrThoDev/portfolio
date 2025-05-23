@@ -5,6 +5,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import Menu from "@/components/Menu";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const beautiful = localFont({
 	src: "../fonts/beautiful.woff2",
@@ -84,6 +85,7 @@ export default function RootLayout({
 				<NavBar />
 				<Menu />
 				{children} <Footer />
+				<SpeedInsights />
 			</body>
 		</html>
 	);
