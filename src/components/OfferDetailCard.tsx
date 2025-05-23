@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Offer } from "./OfferCard";
 
 export default function OfferDetailCard({
@@ -74,9 +75,14 @@ export default function OfferDetailCard({
 
 					{/* CTA en bas */}
 					<div className="mt-auto pt-6">
-						<button className="bg-[#D16565] text-white px-5 py-3 rounded-lg text-sm font-medium hover:bg-[#b65353] transition">
+						<Link
+							href="https://calendly.com/cyriellethomas-siteweb/30min"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-block bg-[#D16565] text-white px-5 py-3 rounded-lg text-sm font-medium hover:bg-[#b65353] transition"
+						>
 							{offer.cta}
-						</button>
+						</Link>
 					</div>
 				</div>
 			</div>
