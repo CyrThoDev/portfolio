@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import OfferCard, { type Offer } from "@/components/OfferCard";
-import OfferDetailSection from "@/components/OfferDetailCard";
 import OfferDetailCard from "@/components/OfferDetailCard";
 
 export const metadata: Metadata = {
@@ -86,7 +85,6 @@ const offers: Offer[] = [
 	},
 ];
 
-const isEven = (n: number) => n % 2 === 0;
 export default function OffresPage() {
 	return (
 		<main className="min-h-screen flex flex-col px-10 lg:px-30 py-16 text-gray-800  scroll-smooth">
