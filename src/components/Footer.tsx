@@ -33,7 +33,7 @@ const Footer = () => {
 							<FaInstagramSquare size="2rem" />
 						</Link>
 					</div>
-					<Link href="#" className="underline">
+					<Link href="/mentions-legales" className="underline">
 						Mentions légales
 					</Link>
 				</div>
