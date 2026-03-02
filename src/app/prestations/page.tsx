@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import OfferCard, { type Offer } from "@/components/OfferCard";
+
 import OfferDetailCard from "@/components/OfferDetailCard";
 
 export const metadata: Metadata = {
